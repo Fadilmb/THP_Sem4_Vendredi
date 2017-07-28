@@ -1,0 +1,26 @@
+<h1><%=@corsaire.first_name%></h1>
+<h2><%=@corsaire.age%></h2>
+
+<% if @corsaire.bio != nil %>
+	<p>Voici la bio de <%=@corsaire.bio%> : <%=@corsaire.bio%></p>
+<% else %>
+	<p><%=@corsaire.first_name%> n'a pas encore renseigné sa bio !</p>
+<% end %>
+
+
+<% if @corsaire.slack_handle != nil %>
+	<p>Voici le pseudo Slack de <%=@corsaire.first_name%> : <%=@corsaire.slack_handle%></p>
+<% else %>
+	<p><%=@corsaire.first_name%> n'a pas encore renseigné son pseudo Slack !</p>
+<% end %>
+
+<% if @corsaire.github_handle != nil %>
+	<p>Voici le pseudo Github de <%=@corsaire.first_name%> : <%=@corsaire.github_handle%></p>
+<% else %>
+	<p><%=@corsaire.first_name%> n'a pas encore renseigné son pseudo Github !</p>
+<% end %>
+
+<p>I like <%=@corsaire.likeness%></p>
+
+
+<%= link_to "Edit", edit_corsaire_path %>

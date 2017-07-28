@@ -1,0 +1,14 @@
+<%= form_for @corsaire do |f| %>
+	First name : <%= f.text_field :first_name %>
+	Age : <%= f.text_field :age %>
+	Bio : <%= f.text_field :bio %>
+	Slack : <%= f.text_field :slack_handle %>
+	Github : <%= f.text_field :github_handle %>
+	<%= f.radio_button(:likeness, "kebab") %>
+	<%= f.label(:likeness_kebab, "I like kebab") %>
+	<%= f.radio_button(:likeness, "hummus") %>
+	<%= f.label(:likeness_hummus, "I like humus") %>
+ 	<%= f.submit %>
+<% end %>
+
+<%= link_to 'Delete', @corsaire, method: :delete %>

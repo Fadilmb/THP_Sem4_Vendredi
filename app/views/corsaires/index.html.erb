@@ -1,0 +1,7 @@
+<% @corsaires.each do |corsaire|  %>
+
+<li> <%= corsaire.first_name %> <%= corsaire.age %> <%= link_to "More",corsaire %> </li>
+
+<% end %>
+
+<%= link_to 'Suscribe', new_corsaire_path %>
